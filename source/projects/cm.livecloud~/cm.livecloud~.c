@@ -1090,7 +1090,9 @@ void cmlivecloud_float(t_cmlivecloud *x, double f) {
 /* DOUBLE CLICK METHOD FOR VIEWING BUFFER CONTENT                                                                       */
 /************************************************************************************************************************/
 void cmlivecloud_dblclick(t_cmlivecloud *x) {
-	buffer_view(buffer_ref_getobject(x->w_buffer_ref));
+	if (x->w_buffer_ref) {
+		buffer_view(buffer_ref_getobject(x->w_buffer_ref));
+	}
 }
 
 
@@ -1144,8 +1146,8 @@ void cmlivecloud_doset(t_cmlivecloud *x, t_symbol *s, long ac, t_atom *av) {
 	if (ac == 1) {
 		x->buffer_modified = true;
 		x->w_buffer_name = atom_getsym(av); // write buffer name into object structure
-		buffer_ref_set(x->w_buffer_ref, x->w_buffer_name);
-		if (buffer_getchannelcount((t_object *)(buffer_ref_getobject(x->w_buffer_ref))) > 1) {
+		cmlivecloud_buffersetup(x);
+		if (x->w_buffer_ref && buffer_getchannelcount((t_object *)(buffer_ref_getobject(x->w_buffer_ref))) > 1) {
 			object_error((t_object *)x, "referenced window buffer has more than 1 channel. expect strange results.");
 		}
 	}

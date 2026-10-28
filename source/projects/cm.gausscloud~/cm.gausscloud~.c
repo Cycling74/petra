@@ -1048,7 +1048,9 @@ void cmgausscloud_float(t_cmgausscloud *x, double f) {
 /* DOUBLE CLICK METHOD FOR VIEWING BUFFER CONTENT                                                                       */
 /************************************************************************************************************************/
 void cmgausscloud_dblclick(t_cmgausscloud *x) {
-	buffer_view(buffer_ref_getobject(x->buffer_ref));
+	if (x->buffer_ref) {
+		buffer_view(buffer_ref_getobject(x->buffer_ref));
+	}
 }
 
 
@@ -1098,8 +1100,8 @@ void cmgausscloud_doset(t_cmgausscloud *x, t_symbol *s, long ac, t_atom *av) {
 	if (ac == 1) {
 		x->buffer_modified = true;
 		x->buffer_name = atom_getsym(av); // write buffer name into object structure
-		buffer_ref_set(x->buffer_ref, x->buffer_name);
-		if (buffer_getchannelcount((t_object *)(buffer_ref_getobject(x->buffer_ref))) > 2) {
+		cmgausscloud_buffersetup(x);
+		if (x->buffer_ref && buffer_getchannelcount((t_object *)(buffer_ref_getobject(x->buffer_ref))) > 2) {
 			object_error((t_object *)x, "referenced sample buffer has more than 2 channels. using channels 1 and 2.");
 		}
 	}
