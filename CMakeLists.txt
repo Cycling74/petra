@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.19)
 string(REGEX REPLACE "(.*)/" "" THIS_FOLDER_NAME "${CMAKE_CURRENT_SOURCE_DIR}")
 project(${THIS_FOLDER_NAME})
 
+include(${CMAKE_CURRENT_SOURCE_DIR}/source/max-sdk-base/script/max-package.cmake)
+
 if (APPLE)
     set(C74_BUILD_FAT YES)
     if (${CMAKE_GENERATOR} MATCHES "Xcode")
