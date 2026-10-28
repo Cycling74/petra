@@ -23,7 +23,7 @@ As of v1.1.0, the petra package will contain a Max for Live Device, which showca
 
 ![m4l device](http://circuitmusiclabs.com/wp-content/uploads/petra-m4l-device.png)
 
-The device uses the `cm.indexcloud~`external object and merely serves as an example of what can be done with the objects contained in the petra package. The device can be found in the [extras](https://github.com/CircuitMusicLabs/petra/blob/master/extras) folder.
+The device uses the `cm.indexcloud~`external object and merely serves as an example of what can be done with the objects contained in the petra package. The device can be found in the [devices](https://github.com/Cycling74/petra/blob/master/devices) folder.
 
 #### How to use the Max for Live Device
 Drop the Max for Live Device onto a new MIDI Track in Ableton Live and you are ready to go.
