@@ -1027,6 +1027,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -2928,6 +2929,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -4728,6 +4730,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -6446,6 +6449,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -8290,6 +8294,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -10010,6 +10015,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -12015,6 +12021,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -13690,6 +13697,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -15169,6 +15177,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
